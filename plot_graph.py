@@ -38,7 +38,7 @@ def generate_graph(criteria, scores):
             linestyle=":"
         )
 
-    #ax.fill(angles, values, color="black", alpha=0.15)
+    ax.fill(angles, values, color="black", alpha=0.15)
     ax.plot(angles, values, color="black", linewidth=3, alpha=0.7)
 
     ax.set_xticks(angles[:-1])
