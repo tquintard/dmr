@@ -1,5 +1,5 @@
 import streamlit as st
-from modules import plot_graph
+from plot_graph import generate_graph
 
 # Titre principal
 st.title("Data Maturity Review")
@@ -66,7 +66,7 @@ if st.button("Lancer le graphique", key="generate_button"):
             scores.append(response_to_score[st.session_state.responses[label]])
 
     # Appeler la fonction `generate_graph` pour créer le graphique
-    fig = plot_graph.generate_graph(criteria, scores)
+    fig = generate_graph(criteria, scores)
 
     # Afficher le graphique dans Streamlit
     st.pyplot(fig)
