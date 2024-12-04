@@ -47,7 +47,7 @@ def generate_graph(criteria, scores):
 
     for angle, label, score in zip(angles[:-1], criteria, scores):
         va, ha = xlabel_position(angle)
-        ax.text(angle, 3.05, label, fontsize=8, color=RAG[score], fontweight="bold", ha=ha, va=va)
+        ax.text(angle, 5, label, fontsize=8, color=RAG[score], fontweight="bold", ha=ha, va=va)
         ax.plot([angle]*2, [0, 3], color="gray", lw=0.5, linestyle=":")
 
     ax.spines["polar"].set_visible(False)
